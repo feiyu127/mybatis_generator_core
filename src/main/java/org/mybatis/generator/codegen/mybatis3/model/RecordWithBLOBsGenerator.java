@@ -1,5 +1,5 @@
 /**
- *    Copyright 2006-2016 the original author or authors.
+ *    Copyright ${license.git.copyrightYears} the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -35,6 +35,7 @@ import org.mybatis.generator.api.dom.java.Parameter;
 import org.mybatis.generator.api.dom.java.TopLevelClass;
 import org.mybatis.generator.codegen.AbstractJavaGenerator;
 import org.mybatis.generator.codegen.RootClassInfo;
+import org.mybatis.generator.extend.MyPlugin;
 
 /**
  * 
@@ -59,6 +60,7 @@ public class RecordWithBLOBsGenerator extends AbstractJavaGenerator {
                 .getRecordWithBLOBsType());
         topLevelClass.setVisibility(JavaVisibility.PUBLIC);
         commentGenerator.addJavaFileComment(topLevelClass);
+        MyPlugin.addClassComment(topLevelClass, introspectedTable);
 
         String rootClass = getRootClass();
         if (introspectedTable.getRules().generateBaseRecordClass()) {
