@@ -4,8 +4,8 @@
   "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-	<properties resource="org/generatorConfig.properties" />
-	<classPathEntry location="lib/mysql-connector-java-5.1.41.jar" />
+	<properties resource="generatorConfig.properties" />
+	<classPathEntry location="F:/maven_repository/mysql/mysql-connector-java/5.1.41/mysql-connector-java-5.1.41-sources.jar" />
 
 	<context id="Mysql" defaultModelType="flat" targetRuntime="MyBatis3">
 		<property name="autoDelimitKeywords" value="true" />
